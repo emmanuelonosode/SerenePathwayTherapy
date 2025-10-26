@@ -1,9 +1,8 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 
 const LeafIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-deep-sage"><path d="M11 20A7 7 0 0 1 4 13V8a5 5 0 0 1 5-5h2a5 5 0 0 1 5 5v5a7 7 0 0 1-7 7Zm0 0V8"></path></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white"><path d="M11 20A7 7 0 0 1 4 13V8a5 5 0 0 1 5-5h2a5 5 0 0 1 5 5v5a7 7 0 0 1-7 7Zm0 0V8"></path></svg>
 );
 
 const PhoneIcon = () => (
@@ -21,26 +20,26 @@ const MapPinIcon = () => (
 
 const Footer: React.FC = () => {
     return (
-        <footer className="bg-charcoal text-off-white">
+        <footer className="bg-primary text-white">
             <div className="container mx-auto px-6 py-12">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {/* Brand */}
                     <div className="md:col-span-2 lg:col-span-1">
-                        <Link to="/" className="flex items-center gap-2 text-2xl font-bold font-serif text-off-white mb-4">
+                        <Link to="/" className="flex items-center gap-2 text-2xl font-bold font-serif text-white mb-4">
                            <LeafIcon />
                            Serene Pathways
                         </Link>
-                        <p className="text-gray-400">Your journey to healing and self-discovery starts here. Providing compassionate and professional therapy services.</p>
+                        <p className="text-gray-300">Your journey to healing and self-discovery starts here. Providing compassionate and professional therapy services.</p>
                     </div>
 
                     {/* Quick Links */}
                     <div>
                         <h3 className="font-semibold text-lg mb-4 font-serif">Quick Links</h3>
                         <ul className="space-y-2">
-                            <li><Link to="/about" className="hover:text-deep-sage transition-colors">About Me</Link></li>
-                            <li><Link to="/services" className="hover:text-deep-sage transition-colors">Services</Link></li>
-                            <li><Link to="/blog" className="hover:text-deep-sage transition-colors">Blog</Link></li>
-                            <li><Link to="/contact" className="hover:text-deep-sage transition-colors">Contact</Link></li>
+                            <li><Link to="/about" className="hover:text-secondary transition-colors">About Me</Link></li>
+                            <li><Link to="/services" className="hover:text-secondary transition-colors">Services</Link></li>
+                            <li><Link to="/blog" className="hover:text-secondary transition-colors">Blog</Link></li>
+                            <li><Link to="/contact" className="hover:text-secondary transition-colors">Contact</Link></li>
                         </ul>
                     </div>
 
@@ -48,24 +47,24 @@ const Footer: React.FC = () => {
                     <div>
                         <h3 className="font-semibold text-lg mb-4 font-serif">Legal</h3>
                         <ul className="space-y-2">
-                            <li><Link to="/policies" className="hover:text-deep-sage transition-colors">Privacy Policy</Link></li>
-                            <li><Link to="/policies" className="hover:text-deep-sage transition-colors">Terms of Service</Link></li>
-                            <li><Link to="/policies" className="hover:text-deep-sage transition-colors">HIPAA Notice</Link></li>
+                            <li><Link to="/policies" className="hover:text-secondary transition-colors">Privacy Policy</Link></li>
+                            <li><Link to="/policies" className="hover:text-secondary transition-colors">Terms of Service</Link></li>
+                            <li><Link to="/policies" className="hover:text-secondary transition-colors">HIPAA Notice</Link></li>
                         </ul>
                     </div>
                     
                     {/* Contact Info */}
                     <div>
                         <h3 className="font-semibold text-lg mb-4 font-serif">Contact</h3>
-                        <ul className="space-y-3 text-gray-400">
-                            <li className="flex items-start gap-3"><MapPinIcon /><a href="#" className="hover:text-deep-sage transition-colors">123 Wellness Lane, Tranquility, CA 90210</a></li>
-                            <li className="flex items-center gap-3"><PhoneIcon /><a href="tel:123-456-7890" className="hover:text-deep-sage transition-colors">(123) 456-7890</a></li>
-                            <li className="flex items-center gap-3"><MailIcon /><a href="mailto:contact@serenepathways.com" className="hover:text-deep-sage transition-colors">contact@serenepathways.com</a></li>
+                        <ul className="space-y-3 text-gray-300">
+                            <li className="flex items-start gap-3"><MapPinIcon /><a href="#" className="hover:text-secondary transition-colors">123 Wellness Lane, Tranquility, CA 90210</a></li>
+                            <li className="flex items-center gap-3"><PhoneIcon /><a href="tel:123-456-7890" className="hover:text-secondary transition-colors">(123) 456-7890</a></li>
+                            <li className="flex items-center gap-3"><MailIcon /><a href="mailto:contact@serenepathways.com" className="hover:text-secondary transition-colors">contact@serenepathways.com</a></li>
                         </ul>
                     </div>
                 </div>
 
-                <div className="mt-12 pt-8 border-t border-gray-700 text-center text-gray-400">
+                <div className="mt-12 pt-8 border-t border-white/20 text-center text-gray-300">
                     <p className="mb-2">&copy; {new Date().getFullYear()} Serene Pathways Therapy. All Rights Reserved.</p>
                     <p className="text-sm">If you are in a life-threatening situation, do not use this site. Call the National Suicide Prevention Lifeline, a free, 24-hour hotline, at 1-800-273-8255. Your call will be confidential and free.</p>
                 </div>

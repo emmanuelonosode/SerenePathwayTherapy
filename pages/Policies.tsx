@@ -1,13 +1,12 @@
-
 import React from 'react';
 
 const PageWrapper: React.FC<{ title: string, subtitle: string, children: React.ReactNode }> = ({ title, subtitle, children }) => (
-    <div className="bg-deep-sage/10">
+    <div className="bg-surface">
         <div className="container mx-auto px-6 py-16 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold font-serif text-charcoal mb-2">{title}</h1>
-            <p className="text-lg text-charcoal/80 max-w-2xl mx-auto">{subtitle}</p>
+            <h1 className="text-4xl md:text-5xl font-bold font-serif text-text-primary mb-2">{title}</h1>
+            <p className="text-lg text-text-primary/80 max-w-2xl mx-auto">{subtitle}</p>
         </div>
-        <div className="bg-off-white">
+        <div className="bg-white">
             <div className="container mx-auto px-6 py-20">
                 {children}
             </div>
@@ -34,19 +33,19 @@ const Policies: React.FC = () => {
             <div className="max-w-3xl mx-auto">
                 <div className="space-y-6">
                     {policies.map((policy, index) => (
-                        <div key={index} className="bg-white p-6 rounded-2xl shadow-md border border-light-gray/20 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                        <div key={index} className="bg-white p-6 rounded-2xl shadow-md border border-light-gray flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
                             <div className="flex-1">
-                                <h2 className="text-xl font-semibold text-charcoal mb-1">{policy.title}</h2>
-                                <p className="text-charcoal/80">{policy.description}</p>
+                                <h2 className="text-xl font-semibold text-text-primary mb-1">{policy.title}</h2>
+                                <p className="text-text-primary/80">{policy.description}</p>
                             </div>
-                            <a href="#" className="flex-shrink-0 bg-deep-sage text-white px-4 py-2 rounded-full hover:bg-opacity-90 transition-all duration-300 shadow-sm flex items-center gap-2">
+                            <a href="#" className="flex-shrink-0 bg-primary text-white px-4 py-2 rounded-full hover:bg-opacity-90 transition-all duration-300 shadow-sm flex items-center gap-2">
                                 <DownloadIcon />
                                 Download PDF
                             </a>
                         </div>
                     ))}
                 </div>
-                 <div className="mt-12 text-center text-charcoal/70 bg-sky-blue/20 p-6 rounded-2xl">
+                 <div className="mt-12 text-center text-text-primary/70 bg-accent/20 p-6 rounded-2xl">
                     <p>These documents are provided in PDF format. You will have an opportunity to review and sign them electronically through the secure client portal before our first session.</p>
                 </div>
             </div>

@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from 'react';
 import { GoogleGenAI } from "@google/genai";
 
@@ -75,11 +74,11 @@ const Chatbot: React.FC = () => {
     return (
         <>
             {/* Chat Window */}
-            <div className={`fixed bottom-24 right-6 w-[calc(100%-3rem)] max-w-sm h-[70vh] max-h-[600px] bg-off-white rounded-2xl shadow-2xl flex flex-col transition-all duration-300 ease-in-out ${isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'}`}>
+            <div className={`fixed bottom-24 right-6 w-[calc(100%-3rem)] max-w-sm h-[70vh] max-h-[600px] bg-white rounded-2xl shadow-2xl flex flex-col transition-all duration-300 ease-in-out ${isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'}`}>
                 {/* Header */}
-                <div className="flex justify-between items-center p-4 bg-deep-sage rounded-t-2xl text-white">
+                <div className="flex justify-between items-center p-4 bg-primary rounded-t-2xl text-white">
                     <h3 className="font-bold text-lg">AI Assistant</h3>
-                    <button onClick={() => setIsOpen(false)} className="rounded-full p-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-off-white">
+                    <button onClick={() => setIsOpen(false)} className="rounded-full p-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-white">
                         <CloseIcon />
                     </button>
                 </div>
@@ -87,20 +86,20 @@ const Chatbot: React.FC = () => {
                 <div className="flex-1 overflow-y-auto p-4 space-y-4">
                     {messages.map((msg, index) => (
                         <div key={index} className={`flex items-end gap-2 ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
-                           {msg.sender === 'ai' && <div className="w-8 h-8 rounded-full bg-deep-sage flex-shrink-0 flex items-center justify-center"><BotIcon /></div>}
-                           <div className={`max-w-[80%] p-3 rounded-2xl ${msg.sender === 'user' ? 'bg-sky-blue/50 rounded-br-none' : 'bg-light-gray rounded-bl-none'}`}>
-                                <p className="text-sm text-charcoal" style={{whiteSpace: 'pre-wrap'}}>{msg.text}</p>
+                           {msg.sender === 'ai' && <div className="w-8 h-8 rounded-full bg-primary flex-shrink-0 flex items-center justify-center"><BotIcon /></div>}
+                           <div className={`max-w-[80%] p-3 rounded-2xl ${msg.sender === 'user' ? 'bg-accent/50 rounded-br-none' : 'bg-surface rounded-bl-none'}`}>
+                                <p className="text-sm text-text-primary" style={{whiteSpace: 'pre-wrap'}}>{msg.text}</p>
                            </div>
                         </div>
                     ))}
                     {isLoading && (
                         <div className="flex items-end gap-2 justify-start">
-                             <div className="w-8 h-8 rounded-full bg-deep-sage flex-shrink-0 flex items-center justify-center"><BotIcon /></div>
-                            <div className="max-w-[80%] p-3 rounded-2xl bg-light-gray rounded-bl-none">
+                             <div className="w-8 h-8 rounded-full bg-primary flex-shrink-0 flex items-center justify-center"><BotIcon /></div>
+                            <div className="max-w-[80%] p-3 rounded-2xl bg-surface rounded-bl-none">
                                 <div className="flex items-center gap-1">
-                                    <span className="w-2 h-2 bg-charcoal/50 rounded-full animate-bounce delay-0"></span>
-                                    <span className="w-2 h-2 bg-charcoal/50 rounded-full animate-bounce delay-150"></span>
-                                    <span className="w-2 h-2 bg-charcoal/50 rounded-full animate-bounce delay-300"></span>
+                                    <span className="w-2 h-2 bg-text-primary/50 rounded-full animate-bounce delay-0"></span>
+                                    <span className="w-2 h-2 bg-text-primary/50 rounded-full animate-bounce delay-150"></span>
+                                    <span className="w-2 h-2 bg-text-primary/50 rounded-full animate-bounce delay-300"></span>
                                 </div>
                             </div>
                         </div>
@@ -116,10 +115,10 @@ const Chatbot: React.FC = () => {
                             value={input}
                             onChange={(e) => setInput(e.target.value)}
                             placeholder="Ask a question..."
-                            className="w-full rounded-full border-gray-300 shadow-sm focus:border-deep-sage focus:ring-deep-sage px-4 py-2"
+                            className="w-full rounded-full border-gray-300 shadow-sm focus:border-primary focus:ring-primary px-4 py-2"
                             disabled={isLoading}
                         />
-                        <button type="submit" disabled={isLoading} className="bg-deep-sage text-white p-3 rounded-full hover:bg-opacity-90 transition-all duration-300 shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-deep-sage disabled:bg-opacity-50">
+                        <button type="submit" disabled={isLoading} className="bg-primary text-white p-3 rounded-full hover:bg-opacity-90 transition-all duration-300 shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary disabled:bg-opacity-50">
                             <SendIcon />
                         </button>
                     </form>
@@ -128,7 +127,7 @@ const Chatbot: React.FC = () => {
             {/* FAB Toggle Button */}
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="fixed bottom-6 right-6 bg-burnt-sienna text-white w-16 h-16 rounded-full shadow-lg flex items-center justify-center transition-transform duration-300 hover:scale-110 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-burnt-sienna focus-visible:ring-offset-off-white"
+                className="fixed bottom-6 right-6 bg-action text-white w-16 h-16 rounded-full shadow-lg flex items-center justify-center transition-transform duration-300 hover:scale-110 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-action focus-visible:ring-offset-white"
                 aria-label="Toggle AI Chatbot"
             >
                 {isOpen ? <CloseIcon /> : <ChatIcon />}

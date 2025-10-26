@@ -46,7 +46,7 @@ export const blogPosts = [
         excerpt: "Anxiety can feel overwhelming, but grounding techniques can bring you back to the present moment. Here are 10 simple exercises you can do anywhere...",
         category: "Anxiety",
         date: "October 26, 2023",
-        imageUrl: "https://picsum.photos/400/250?random=1"
+        imageUrl: "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?q=80&w=400&h=250&auto=format&fit=crop&crop=entropy"
     },
     {
         id: 2,
@@ -54,7 +54,7 @@ export const blogPosts = [
         excerpt: "Wondering if therapy is right for you? This article explores common signs that suggest you might benefit from professional support.",
         category: "Mental Health",
         date: "October 15, 2023",
-        imageUrl: "https://picsum.photos/400/250?random=2"
+        imageUrl: "https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=400&h=250&auto=format&fit=crop&crop=entropy"
     },
     {
         id: 3,
@@ -62,7 +62,7 @@ export const blogPosts = [
         excerpt: "Being kind to yourself is one of the most powerful tools for mental well-being. Learn how to cultivate self-compassion with these practical tips.",
         category: "Self-Care",
         date: "September 30, 2023",
-        imageUrl: "https://picsum.photos/400/250?random=3"
+        imageUrl: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=400&h=250&auto=format&fit=crop&crop=entropy"
     },
     {
         id: 4,
@@ -70,7 +70,7 @@ export const blogPosts = [
         excerpt: "Grief is a deeply personal experience. We discuss the different stages and feelings associated with loss, and how to find support.",
         category: "Grief",
         date: "September 12, 2023",
-        imageUrl: "https://picsum.photos/400/250?random=4"
+        imageUrl: "https://images.unsplash.com/photo-1506126613408-4e05860f58e0?q=80&w=400&h=250&auto=format&fit=crop&crop=entropy"
     }
 ];
 
