@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/Header';
@@ -24,7 +23,7 @@ const ScrollToTop = () => {
 
 function App() {
   return (
-    <div className="bg-off-white text-charcoal font-sans min-h-screen flex flex-col">
+    <div className="bg-white text-text-primary font-sans min-h-screen flex flex-col">
       <Header />
       <ScrollToTop />
       <main className="flex-grow">

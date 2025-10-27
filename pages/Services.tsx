@@ -1,12 +1,11 @@
-
 import React from 'react';
 
 const PageWrapper: React.FC<{ title: string; children: React.ReactNode }> = ({ title, children }) => (
-    <div className="bg-deep-sage/10">
+    <div className="bg-surface">
         <div className="container mx-auto px-6 py-16 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold font-serif text-charcoal">{title}</h1>
+            <h1 className="text-4xl md:text-5xl font-bold font-serif text-text-primary">{title}</h1>
         </div>
-        <div className="bg-off-white">
+        <div className="bg-white">
             <div className="container mx-auto px-6 py-20">
                 {children}
             </div>
@@ -15,10 +14,10 @@ const PageWrapper: React.FC<{ title: string; children: React.ReactNode }> = ({ t
 );
 
 const ServiceCard: React.FC<{ title: string, description: string, children: React.ReactNode }> = ({title, description, children}) => (
-    <div className="bg-white p-8 rounded-2xl shadow-lg mb-12">
-        <h3 className="text-2xl font-bold font-serif text-charcoal mb-3">{title}</h3>
-        <p className="text-charcoal/80 mb-6 leading-relaxed">{description}</p>
-        <div className="prose max-w-none text-charcoal/80">
+    <div className="bg-white p-8 rounded-2xl shadow-lg mb-12 border border-light-gray">
+        <h3 className="text-2xl font-bold font-serif text-text-primary mb-3">{title}</h3>
+        <p className="text-text-primary/80 mb-6 leading-relaxed">{description}</p>
+        <div className="prose max-w-none text-text-primary/80">
             {children}
         </div>
     </div>
@@ -66,25 +65,25 @@ const Services: React.FC = () => {
                 </ServiceCard>
                 
                 {/* Investment Section */}
-                <section className="bg-pale-peach p-8 rounded-2xl text-center">
-                    <h2 className="text-3xl font-bold font-serif text-charcoal mb-4">Investment in Your Well-Being</h2>
-                    <p className="text-charcoal/80 max-w-2xl mx-auto mb-8">
+                <section className="bg-surface p-8 rounded-2xl text-center">
+                    <h2 className="text-3xl font-bold font-serif text-text-primary mb-4">Investment in Your Well-Being</h2>
+                    <p className="text-text-primary/80 max-w-2xl mx-auto mb-8">
                         I am committed to making therapy accessible and providing transparent information about fees. Your investment is a commitment to your long-term health and happiness.
                     </p>
                     <div className="grid md:grid-cols-2 gap-8">
-                        <div className="bg-off-white p-6 rounded-xl shadow-md">
+                        <div className="bg-white p-6 rounded-xl shadow-md">
                             <h3 className="text-xl font-semibold mb-2">Session Rates</h3>
-                            <p className="text-4xl font-bold text-deep-sage mb-2">$150</p>
-                            <p className="text-charcoal/70">per 50-minute session</p>
+                            <p className="text-4xl font-bold text-primary mb-2">$150</p>
+                            <p className="text-text-primary/70">per 50-minute session</p>
                             <p className="text-sm mt-4">Extended sessions (EMDR, Couples) are prorated.</p>
                         </div>
-                        <div className="bg-off-white p-6 rounded-xl shadow-md">
+                        <div className="bg-white p-6 rounded-xl shadow-md">
                             <h3 className="text-xl font-semibold mb-2">Insurance & Payment</h3>
-                            <p className="text-charcoal/70 mb-2">I am an out-of-network provider. I can provide a superbill for you to seek reimbursement from your PPO plan.</p>
-                            <p className="text-charcoal/70">Payment is due at time of service via Credit/Debit or HSA/FSA cards.</p>
+                            <p className="text-text-primary/70 mb-2">I am an out-of-network provider. I can provide a superbill for you to seek reimbursement from your PPO plan.</p>
+                            <p className="text-text-primary/70">Payment is due at time of service via Credit/Debit or HSA/FSA cards.</p>
                         </div>
                     </div>
-                     <p className="mt-8 text-sm text-charcoal/70">Under the No Surprises Act, you have the right to receive a "Good Faith Estimate" explaining how much your medical care will cost. For questions or more information, please don't hesitate to ask.</p>
+                     <p className="mt-8 text-sm text-text-primary/70">Under the No Surprises Act, you have the right to receive a "Good Faith Estimate" explaining how much your medical care will cost. For questions or more information, please don't hesitate to ask.</p>
                 </section>
             </div>
         </PageWrapper>
